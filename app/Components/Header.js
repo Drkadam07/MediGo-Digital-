@@ -103,21 +103,33 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [isScrollingUp, setIsScrollingUp] = useState(true);
   const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > 10) setIsScrolled(true);
+      else setIsScrolled(false);
+
+      if (currentScrollY > lastScrollY) {
+        setIsScrollingUp(false); // Scrolling Down -> Hide Navbar
+      } else {
+        setIsScrollingUp(true); // Scrolling Up -> Show Navbar
+      }
+      setLastScrollY(currentScrollY);
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   return (
     <header
-      className={`backdrop-blur-md shadow-lg fixed w-full z-50 rounded-3xl shadow-md transition-all duration-300 ${
-        isScrolled ? 'bg-white' : 'bg-transparent'
-      }`}
+      className={`fixed w-full z-50 rounded-3xl shadow-md transition-transform duration-300 ${
+        isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
+      } ${isScrollingUp ? 'translate-y-0' : '-translate-y-full'}`}
     >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-20">
