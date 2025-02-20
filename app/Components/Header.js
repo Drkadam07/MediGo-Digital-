@@ -123,7 +123,7 @@ export default function Header() {
         <div className="flex justify-between items-center h-20">
           <Link href="/" className="flex items-center">
             <img src="/logoMedigo.png" alt="MediGo Digital Logo" width={180} height={40} className="h-10 w-auto" />
-            <span className="text-2xl font-bold">MediGo Digital</span>
+            <span className="text-2xl text-gray-800 font-bold">MediGo Digital</span>
           </Link>
 
           <nav className="hidden lg:flex items-center space-x-8">
