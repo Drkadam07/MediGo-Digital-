@@ -173,7 +173,7 @@ export default function Header() {
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
         <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full sm:max-w-sm bg-white shadow-md p-6">
           <div className="flex justify-between items-center">
-            <span className="text-lg font-semibold">MediGo Digital</span>
+            <span className="text-lg text-gray-800 font-semibold">MediGo Digital</span>
             <button type="button" onClick={() => setMobileMenuOpen(false)} className="p-2 text-gray-700">
               <XMarkIcon className="h-6 w-6" aria-hidden="true" />
             </button>
