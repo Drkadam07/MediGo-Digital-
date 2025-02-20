@@ -1,11 +1,8 @@
-// import { Button } from "@/components/ui/button"
-// import Image from "next/image"
-
 export default function Hero() {
     return (
         <section className="relative overflow-hidden">
             <div className="absolute inset-0">
-                <div className="absolute inset-0 bg-[url('/herobg.png')] opacity-10"></div>
+                <div className="absolute inset-0 bg-[url('/herobg.png')] opacity-15"></div>
             </div>
             <div className="container mx-auto px-4 py-20 relative">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -17,7 +14,7 @@ export default function Hero() {
                             Transforming Healthcare Through Digital Innovation
                         </p>
                         <button className="bg-gradient-to-r rounded-full from-white via-[#add8e6] to-[#f8d7da] hover:bg-gradient-to-r hover:from-[#add8e6] hover:to-white text-black text-lg px-6 py-3 w-auto">
-                            Show Me How
+                            Discover More
                         </button>
 
                     </div>
