@@ -2,9 +2,9 @@ import Link from "next/link"
 import Image from "next/image"
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react"
 
-export default function Footer() {
+export default function Footerbox() {
   return (
-    <footer className="bg-[#002A41] text-white">
+    <div className="bg-[#002A41] text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
@@ -61,7 +61,7 @@ export default function Footer() {
           <p>&copy; {new Date().getFullYear()} MediGo Digital. All rights reserved.</p>
         </div>
       </div>
-    </footer>
+    </div>
   )
 }
 
