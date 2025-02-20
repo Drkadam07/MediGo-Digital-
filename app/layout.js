@@ -1,3 +1,4 @@
+import Header from "@/Components/Header";
 import "./globals.css";
 
 export const metadata = {
@@ -15,6 +16,7 @@ Best Pharmacies & Medical Stores, Best Pharmaceutical Companies ,best Diagnostic
         <link rel="icon" href="/logoMedigo.png" type="image/x-icon" />
       </head>
       <body>
+        <Header/>
         {children}
       </body>
     </html>
