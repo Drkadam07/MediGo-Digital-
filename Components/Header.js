@@ -81,7 +81,6 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { Dialog, DialogPanel } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { usePathname } from 'next/navigation';
@@ -100,11 +99,11 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="bg-white shadow-sm fixed w-full z-50">
+    <header className="bg-white shadow-sm fixed w-full z-50  rounded-3xl shadow-md">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-20">
           <Link href="/" className="flex items-center">
-            <Image src="/logoMedigo.png" alt="MediGo Digital Logo" width={180} height={40} className="h-10 w-auto" />
+            <img src="/logoMedigo.png" alt="MediGo Digital Logo" width={180} height={40} className="h-10 w-auto" />
             <span className="text-2xl font-bold">MediGo Digital</span>
           </Link>
 
@@ -132,7 +131,7 @@ export default function Header() {
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
         <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full sm:max-w-sm bg-white shadow-md p-6">
           <div className="flex justify-between items-center">
-            <span className="text-lg font-semibold">Menu</span>
+            <span className="text-lg font-semibold">MediGo Digital</span>
             <button type="button" onClick={() => setMobileMenuOpen(false)} className="p-2 text-gray-700">
               <XMarkIcon className="h-6 w-6" aria-hidden="true" />
             </button>
