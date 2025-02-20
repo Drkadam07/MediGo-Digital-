@@ -1,6 +1,6 @@
-import Header from "@/Components/Header";
+import Header from "@/app/Components/Header";
 import "./globals.css";
-import Footer from "@/Components/Footer";
+import Footer from "@/app/Components/Footer";
 
 export const metadata = {
   title: "MediGo Digital",
@@ -17,7 +17,7 @@ Best Pharmacies & Medical Stores, Best Pharmaceutical Companies ,best Diagnostic
         <link rel="icon" href="/logoMedigo.png" type="image/x-icon" />
       </head>
       <body>
-        <Header />
+        <Header/>
         {children}
         <Footer />
       </body>
