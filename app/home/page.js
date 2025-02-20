@@ -27,7 +27,7 @@ export default function Hero() {
                             alt="Award Certificate"
                             width={600}
                             height={400}
-                            className="rounded-lg shadow-2xl"
+                            className="rounded-lg"
                         />
                         <div className="absolute -right-8 -bottom-8">
                             <img src="/placeholder.svg" alt="Award Trophy" width={200} height={200} className="animate-bounce" />
