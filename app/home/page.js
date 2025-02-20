@@ -2,8 +2,6 @@ import Header from "@/Components/Header";
 
 export default function Hero() {
     return (
-        <>
-        <Header/>
         <section className="bg-[#003B5C] relative overflow-hidden">
             <div className="absolute inset-0">
                 <div className="absolute inset-0 bg-[url('/bghero.webp')] bg-cover bg-center opacity-30" ></div>
@@ -37,6 +35,5 @@ export default function Hero() {
                 </div>
             </div>
         </section>
-        </>
     )
 }
