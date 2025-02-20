@@ -3,7 +3,7 @@
 
 export default function Hero() {
     return (
-        <section className="bg-gradient-to-r  relative overflow-hidden">
+        <section className="relative overflow-hidden">
             <div className="absolute inset-0">
                 <div className="absolute inset-0 bg-[url('/herobg.png')] opacity-10"></div>
             </div>
