@@ -28,7 +28,7 @@ export default function Hero() {
                             className="rounded-lg"
                         />
                         <div className="absolute -right-8 -bottom-8">
-                            <img src="/" alt="Award Trophy" width={200} height={200} className="animate-bounce" />
+                            <img src="/symbolmedigo.png" alt="Award Trophy" width={200} height={200} className="animate-bounce" />
                         </div>
                     </div>
                 </div>
