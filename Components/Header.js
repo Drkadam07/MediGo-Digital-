@@ -77,7 +77,6 @@
 //     </header>
 //   );
 // }
-
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
@@ -91,7 +90,6 @@ const navLinks = [
   { href: '/services', label: 'Services' },
   { href: '/industries', label: 'Industries' },
   { href: '/blogs', label: 'Blogs' },
-  { href: '/contact', label: 'Contact Us' },
 ];
 
 export default function Header() {
@@ -99,7 +97,7 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="bg-white shadow-sm fixed w-full z-50  rounded-3xl shadow-md">
+    <header className="backdrop-blur-md shadow-lg bg-white fixed w-full z-50 rounded-3xl shadow-md">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-20">
           <Link href="/" className="flex items-center">
@@ -108,7 +106,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8">
             {navLinks.map(({ href, label }) => (
               <Link
                 key={href}
@@ -118,6 +116,11 @@ export default function Header() {
                 {label}
               </Link>
             ))}
+            <Link href="#contactus">
+              <button className="bg-gradient-to-r rounded-full from-white via-[#add8e6] to-[#f8d7da] hover:bg-gradient-to-r hover:from-[#add8e6] hover:to-white text-black px-4 py-2">
+                Contact Us
+              </button>
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -136,16 +139,21 @@ export default function Header() {
               <XMarkIcon className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
-          <div className="mt-6 space-y-4">
+          <div className="mt-6 space-y-4 font-semibold ">
             {navLinks.map(({ href, label }) => (
               <Link
                 key={href}
                 href={href}
-                className={`block px-4 py-2 text-gray-700 hover:text-blue-600 ${pathname === href ? 'text-blue-600 font-semibold' : ''}`}
+                className={`block px-4 py-2 rounded-full text-gray-700 hover:bg-gradient-to-r hover:from-[#add8e6] hover:to-white hover:text-blue-600 ${pathname === href ? 'text-blue-600 font-semibold' : ''}`}
               >
                 {label}
               </Link>
             ))}
+            <Link href="#contactus">
+              <button className="block w-full px-4 py-2 bg-gradient-to-r font-semibold rounded-full from-white via-[#add8e6] to-[#f8d7da] hover:bg-gradient-to-r hover:from-[#add8e6] hover:to-white ">
+                Contact Us
+              </button>
+            </Link>
           </div>
         </DialogPanel>
       </Dialog>
