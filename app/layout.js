@@ -1,7 +1,6 @@
 import Header from "@/Components/Header";
 import "./globals.css";
 import Footer from "@/Components/Footer";
-import Footerbox from "@/Components/Footer";
 
 export const metadata = {
   title: "MediGo Digital",
@@ -20,7 +19,7 @@ Best Pharmacies & Medical Stores, Best Pharmaceutical Companies ,best Diagnostic
       <body>
         <Header/>
         {children}
-        <Footerbox/>
+        <Footer/>
       </body>
     </html>
   );
