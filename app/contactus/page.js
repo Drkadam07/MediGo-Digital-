@@ -1,67 +1,93 @@
-// import { Button } from "@/components/ui/button"
-// import { Input } from "@/components/ui/input"
-// import { Textarea } from "@/components/ui/textarea"
+'use client'
+import React, { useState } from "react";
+import { FaPaperPlane } from 'react-icons/fa';
+const ContactForm = () => {
+	const [validated, setValidated] = useState(false);
+
+	const handleSubmit = (event) => {
+		event.preventDefault();
+
+		const form = event.currentTarget;
+		if (form.checkValidity() === false) {
+			event.preventDefault();
+			event.stopPropagation();
+		}
+
+		setValidated(true);
+	};
+	return (
+		<form
+			className="md:pr-12"
+			noValidate
+			validated={validated}
+			onSubmit={handleSubmit}
+		>
+			<div className="mb-4">
+				<input
+					type="text"
+					className="min-h-[48px] leading-[48px] bg-[#3A384D]  border border-transparent rounded-xl focus:outline-none focus:border focus:border-[#86b7fe] w-full px-5"
+					placeholder="Enter Name"
+				/>
+			</div>
+			<div className="mb-4">
+				<input
+					type="email"
+					className="min-h-[48px] leading-[48px] bg-[#3A384D]  border border-transparent rounded-xl focus:outline-none focus:border focus:border-[#86b7fe] w-full px-5"
+					placeholder="Enter Email"
+				/>
+			</div>
+			<div className="mb-4">
+				<textarea
+					name="message"
+					className="min-h-[48px] leading-[48px] bg-[#3A384D]  border border-transparent rounded-xl focus:outline-none focus:border focus:border-[#86b7fe] w-full px-5"
+					placeholder="Enter Message"
+					rows="4"
+				></textarea>
+			</div>
+			<div className="text-end">
+				<button
+					type="submit"
+					className="bg-gradient-to-r text-gray-800 font-semibold rounded-full shadow-xl shadow-teal-600/30 from-white via-[#add8e6] to-[#f8d7da] hover:bg-gradient-to-r hover:from-[#add8e6] hover:to-white px-10 py-3 mb-4 flex items-center justify-center gap-2"
+				>
+					<FaPaperPlane /> Send
+				</button>
+			</div>
+		</form>
+	);
+};
+
 export default function Contact() {
-    return (
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">Ready to Grow Your Practice?</h2>
-            <p className="text-xl text-gray-600">
-              Get in touch with us to discuss how we can help you achieve your goals.
-            </p>
-          </div>
-  
-          <div className="max-w-2xl mx-auto">
-            <form className="space-y-6">
-              {/* Grid for Name and Email */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* Name Input */}
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Your Name"
-                    className="w-full bg-white border border-gray-300 text-lg py-3 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 placeholder-gray-600 hover:bg-teal-50 transition-all duration-300"
-                  />
-                </div>
-                {/* Email Input */}
-                <div>
-                  <input
-                    type="email"
-                    placeholder="Your Email"
-                    className="w-full bg-white border border-gray-300 text-lg py-3 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 placeholder-gray-600 hover:bg-teal-50 transition-all duration-300"
-                  />
-                </div>
-              </div>
-  
-              {/* Phone Input */}
-              <div>
-                <input
-                  type="tel"
-                  placeholder="Phone Number"
-                  className="w-full bg-white border border-gray-300 text-lg py-3 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 placeholder-gray-600 hover:bg-teal-50 transition-all duration-300"
-                />
-              </div>
-  
-              {/* Message Textarea */}
-              <div>
-                <textarea
-                  placeholder="Your Message"
-                  className="w-full bg-white border border-gray-300 text-lg py-3 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 placeholder-gray-600 hover:bg-teal-50 transition-all duration-300"
-                  rows={4}
-                />
-              </div>
-  
-              {/* Send Button */}
-              <div className="text-center">
-                <button className="w-full bg-teal-200 text-lg py-4 px-8 rounded-full hover:bg-teal-300 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-teal-500">
-                  Send Message
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
-    );
-  }
-  
+	return (
+		<section className="ezy__contact1 light py-10 md:py-14 bg-white  overflow-hidden">
+			<div className="container px-4 relative">
+				<div className="grid grid-cols-12 py-12">
+					<div className="col-span-12 lg:col-span-6 mb-4 lg:mb-0">
+						<div className="h-full flex items-center">
+							<img
+								src="https://cdn.easyfrontend.com/pictures/contact/contact_1.png"
+								alt=""
+								className="max-w-full h-auto relative z-[2] rounded-tr-[100px] rounded-br rounded-bl-[100px] mx-auto"
+							/>
+						</div>
+					</div>
+					<div className="col-span-12 lg:col-span-6 xl:col-span-5 px-6 relative">
+						<div className="absolute top-0 left-0 lg:-left-[20%] right-0 bottom-0 bg-[#36344939] rounded-tl rounded-tr-[30px] rounded-br-[150px] rounded-bl-[50px]"></div>
+
+						<div className="relative rounded my-12 py-6">
+							<div className="mb-12">
+								<h2 className="text-2xl leading-none font-bold md:text-[45px] mb-4">
+									Contact Us
+								</h2>
+								<p className="text-lg mb-0">
+									We list your menu online, help you process orders.
+								</p>
+							</div>
+							<ContactForm />
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	);
+};
+
