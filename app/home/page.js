@@ -3,7 +3,7 @@ import BenefitsFlow from "../Components/ui/BenefitsFlow";
 
 export default function Hero() {
   return (
-    <section>
+    <section className="bg-white">
       <div className="bg-[#003B5C] relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[url('/bghero.webp')] bg-cover bg-center opacity-30"></div>
@@ -18,7 +18,7 @@ export default function Hero() {
                 Transforming Healthcare Through Digital Innovation
               </p>
               <button className="bg-gradient-to-r text-white font-semibold rounded-full from-white via-[#add8e6] to-[#f8d7da] hover:bg-gradient-to-r hover:from-[#add8e6] hover:to-white text-black text-lg px-6 py-3 w-auto">
-                <span className="bg-gradient-to-r text-transparent bg-clip-text font-semibold rounded-full from-red-500 via-blue-500 to-red-500 hover:bg-gradient-to-r hover:from-blue-500 hover:to-red-500">
+                <span className="bg-gradient-to-r text-transparent bg-clip-text font-semibold rounded-full from-teal-400 via-teal-600 to-purple-600 hover:bg-gradient-to-r hover:from-blue-500 hover:to-teal-500">
                   Discover More
                 </span>
               </button>
