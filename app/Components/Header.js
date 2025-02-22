@@ -49,7 +49,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed w-full z-50 rounded-3xl shadow-md transition-transform duration-300 ${isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
+      className={`fixed w-full z-50 rounded-3xl backdrop-blur-md hadow-md transition-transform duration-300 ${isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
         } ${isScrollingUp ? 'translate-y-0' : '-translate-y-full'}`}
     >
       <div className="container mx-auto px-4">
