@@ -94,22 +94,22 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const images = [
-  { src: "/AboutDoctor2.webp", title: "Gastroenterologists" },
-  { src: "/AboutDoctor2.webp", title: "Doctors" },
-  { src: "/AboutDoctor2.webp", title: "Clinics" },
-  { src: "/AboutDoctor2.webp", title: "Hospitals" },
-  { src: "/AboutDoctor2.webp", title: "Plastic Surgeons" },
-  { src: "/AboutDoctor2.webp", title: "Surgeons" },
-  { src: "/AboutDoctor2.webp", title: "Bariatricians" },
-  { src: "/AboutDoctor2.webp", title: "Cardiologists" },
-  { src: "/AboutDoctor2.webp", title: "Gastroenterologists" },
-  { src: "/AboutDoctor2.webp", title: "Doctors" },
-  { src: "/AboutDoctor2.webp", title: "Clinics" },
-  { src: "/AboutDoctor2.webp", title: "Hospitals" },
-  { src: "/AboutDoctor2.webp", title: "Plastic Surgeons" },
-  { src: "/AboutDoctor2.webp", title: "Surgeons" },
-  { src: "/AboutDoctor2.webp", title: "Bariatricians" },
-  { src: "/AboutDoctor2.webp", title: "Cardiologists" },
+  { src: "/AboutDoctor2.webp", title: "Gastroenterologists", link: "/gastroenterologists" },
+  { src: "/AboutDoctor2.webp", title: "Doctors", link: "/doctors" },
+  { src: "/AboutDoctor2.webp", title: "Clinics", link: "/clinics" },
+  { src: "/AboutDoctor2.webp", title: "Hospitals", link: "/hospitals" },
+  { src: "/AboutDoctor2.webp", title: "Plastic Surgeons", link: "/plastic-surgeons" },
+  { src: "/AboutDoctor2.webp", title: "Surgeons", link: "/surgeons" },
+  { src: "/AboutDoctor2.webp", title: "Bariatricians", link: "/bariatricians" },
+  { src: "/AboutDoctor2.webp", title: "Cardiologists", link: "/cardiologists" },
+  { src: "/AboutDoctor2.webp", title: "Gastroenterologists", link: "/gastroenterologists" },
+  { src: "/AboutDoctor2.webp", title: "Doctors", link: "/doctors" },
+  { src: "/AboutDoctor2.webp", title: "Clinics", link: "/clinics" },
+  { src: "/AboutDoctor2.webp", title: "Hospitals", link: "/hospitals" },
+  { src: "/AboutDoctor2.webp", title: "Plastic Surgeons", link: "/plastic-surgeons" },
+  { src: "/AboutDoctor2.webp", title: "Surgeons", link: "/surgeons" },
+  { src: "/AboutDoctor2.webp", title: "Bariatricians", link: "/bariatricians" },
+  { src: "/AboutDoctor2.webp", title: "Cardiologists", link: "/cardiologists" },
 ];
 
 const groupedImages = [];
@@ -126,8 +126,8 @@ const Industries = () => {
           spaceBetween={20}
           slidesPerView={1}
           autoplay={{ delay: 4000 }}
-          pagination={{ clickable: true }}
-          navigation={{ nextEl: ".custom-next", prevEl: ".custom-prev" }} 
+          pagination={{ clickable: true, el: ".custom-pagination" }}
+          navigation={{ nextEl: ".custom-next", prevEl: ".custom-prev" }}
           breakpoints={{
             640: { slidesPerView: 2, slidesPerGroup: 2 },
             768: { slidesPerView: 3, slidesPerGroup: 3 },
@@ -138,15 +138,21 @@ const Industries = () => {
             <SwiperSlide key={index}>
               <div className="grid grid-rows-2 gap-4">
                 {group.map((item, i) => (
-                  <div key={i} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src={item.src} alt={item.title} className="w-full h-40 object-cover" />
+                  <a 
+                    key={i} 
+                    href={item.link} 
+                    className="bg-white rounded-lg shadow-lg overflow-hidden block"
+                  >
+                    <img src={item.src} alt={item.title} className="w-full h-48 object-cover" />
                     <div className="p-4 text-center text-gray-900 font-semibold">{item.title}</div>
-                  </div>
+                  </a>
                 ))}
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
+        {/* Pagination outside Swiper */}
+        <div className="custom-pagination mt-4 flex justify-center"></div>
       </div>
     </div>
   );
