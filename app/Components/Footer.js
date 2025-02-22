@@ -1,20 +1,21 @@
 import Link from "next/link"
-import Image from "next/image"
+
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react"
 
 export default function Footer() {
   return (
     <footer className="bg-[#002A41] text-white">
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-12 ">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <img
-              src="/placeholder.svg"
+              src="/logoMedigo.png"
               alt="MediGo Digital Logo"
               width={180}
               height={40}
               className="h-10 w-auto mb-4"
-            />
+            />            <span className="text-2xl text-gray-800 font-bold bg-gradient-to-r from-teal-400 to-purple-600 text-transparent bg-clip-text 
+            hover:text-gray-800 hover:drop-shadow-[0_0_10px_rgba(0,255,255,0.7)] transition duration-300 ease-in-out">MediGo Digital</span>
             <p className="text-gray-400 mb-4">Your trusted partner in healthcare digital marketing</p>
             <div className="flex space-x-4">
               <SocialLink href="#" icon={<Facebook className="h-5 w-5" />} />
@@ -28,10 +29,10 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <FooterLink href="/" text="Home" />
-              <FooterLink href="/about" text="About Us" />
-              <FooterLink href="/services" text="Services" />
-              <FooterLink href="/testimonials" text="Testimonials" />
-              <FooterLink href="/contact" text="Contact" />
+              <FooterLink href="#about" text="About Us" />
+              <FooterLink href="#services" text="Services" />
+              <FooterLink href="/blogs" text="Blogs" />
+              <FooterLink href="#contactus" text="Contact" />
             </ul>
           </div>
 
@@ -51,7 +52,7 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-400">
               <li>123 Healthcare Street</li>
               <li>Mumbai, Maharashtra</li>
-              <li>Phone: +91 98901 69506</li>
+              <li>Phone: +91 9xxxx xxxx9</li>
               <li>Email: info@medigodigital.com</li>
             </ul>
           </div>

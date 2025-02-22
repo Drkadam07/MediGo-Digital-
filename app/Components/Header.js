@@ -56,7 +56,8 @@ export default function Header() {
         <div className="flex justify-between items-center h-20">
           <Link href="/" className="flex items-center">
             <img src="/logoMedigo.png" alt="MediGo Digital Logo" width={180} height={40} className="h-10 w-auto" />
-            <span className="text-2xl text-gray-800 font-bold">MediGo Digital</span>
+            <span className="text-2xl text-gray-800 font-bold bg-gradient-to-r from-teal-400 to-purple-600 text-transparent bg-clip-text 
+                                    hover:text-gray-800 hover:drop-shadow-[0_0_10px_rgba(0,255,255,0.7)] transition duration-300 ease-in-out">MediGo Digital</span>
           </Link>
 
           <nav className="hidden lg:flex items-center space-x-8">
