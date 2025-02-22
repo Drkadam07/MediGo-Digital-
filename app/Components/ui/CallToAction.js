@@ -2,10 +2,10 @@ import React from "react";
 
 const CallToAction = () => {
   return (
-    <div className="bg-green-50 py-10 px-5 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto rounded-xl">
+    <div className=" bg-gradient-to-r from-teal-50 to-purple-50 bg-opacity-5 py-10 px-5 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto rounded-xl">
       {/* Left Side - Image */}
       <div className="w-full md:w-1/2 flex justify-center">
-        <img src="/assets/healthcare-cta.png" alt="Healthcare CTA" className="max-w-full" />
+        <img src="#" alt="Healthcare CTA" className="max-w-full" />
       </div>
       
       {/* Right Side - Text and Form */}
@@ -28,7 +28,7 @@ const CallToAction = () => {
         </div>
         
         {/* Button */}
-        <button className="mt-4 bg-blue-800 text-white px-6 py-3 rounded-lg font-medium w-full sm:w-auto hover:bg-blue-900">
+        <button className="mt-4 px-6 py-3 w-full sm:w-auto bg-gradient-to-r text-gray-800 font-semibold rounded-full shadow-xl shadow-purple-400/40 from-white via-[#add8e6] to-[#f8d7da] hover:bg-gradient-to-r hover:from-[#add8e6] hover:to-white transition-all ">
           Request a Call Back!
         </button>
       </div>
