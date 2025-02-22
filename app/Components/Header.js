@@ -7,8 +7,8 @@ import { usePathname } from 'next/navigation';
 
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/about', label: 'About Us' },
-  { href: '/services', label: 'Services' },
+  { href: '#about', label: 'About Us' },
+  { href: '#services', label: 'Services' },
   {
     href: '#', label: 'Industries', submenu: [
       { href: '/industries/doctors-clinics', label: 'Doctors & Clinics' },
@@ -38,7 +38,7 @@ export default function Header() {
       if (currentScrollY > lastScrollY) {
         setIsScrollingUp(false); // Scrolling Down -> Hide Navbar
       } else {
-        setIsScrollingUp(true); 
+        setIsScrollingUp(true);
       }
       setLastScrollY(currentScrollY);
     };
@@ -117,7 +117,7 @@ export default function Header() {
                   className={`block px-4 py-2 rounded-full text-gray-800 hover:bg-gradient-to-r hover:from-[#add8e6] hover:to-white hover:text-blue-600 ${pathname === href ? 'text-blue-600 font-semibold' : ''
                     }`}
                   onClick={() => {
-                    setMobileMenuOpen(false); // Close menu on click
+                    setMobileMenuOpen(false); 
                     if (submenu) {
                       setDropdownOpen(dropdownOpen !== href ? href : null);
                     }
@@ -132,8 +132,8 @@ export default function Header() {
                       <Link
                         key={href}
                         href={href}
-                        className="block px-4 py-2 text-gray-800 rounded-full text-gray-700 hover:bg-gradient-to-r hover:from-[#add8e6] hover:to-white hover:text-blue-600"
-                        onClick={() => setMobileMenuOpen(false)} // Close menu when clicking submenu item
+                        className="block px-4 py-2 text-gray-800 rounded-full  hover:bg-gradient-to-r hover:from-[#add8e6] hover:to-white hover:text-blue-600"
+                        onClick={() => setMobileMenuOpen(false)} 
                       >
                         {label}
                       </Link>
@@ -142,13 +142,12 @@ export default function Header() {
                 )}
               </div>
             ))}
-
-            {/* Contact Us Button */}
-            <Link href="#contactus">
-              <button className="block w-full mt-1 px-4 py-2 bg-gradient-to-r font-semibold rounded-full from-white via-[#add8e6] to-[#f8d7da] hover:bg-gradient-to-r hover:from-[#add8e6] hover:to-white">
+            <Link href="#contactus" onClick={() => setMobileMenuOpen(false)}>
+              <p className="block w-full mt-1 px-4 py-2 bg-gradient-to-r font-semibold text-center rounded-full from-white via-[#add8e6] to-[#f8d7da] hover:bg-gradient-to-r hover:from-[#add8e6] hover:to-white">
                 Contact Us
-              </button>
+              </p>
             </Link>
+
           </div>
         </DialogPanel>
       </Dialog>

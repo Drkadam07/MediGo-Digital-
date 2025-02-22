@@ -58,7 +58,7 @@ const ContactForm = () => {
 
 export default function Contact() {
 	return (
-		<section className="ezy__contact1 light py-10 md:py-14 bg-white  overflow-hidden">
+		<section className="ezy__contact1 light py-10 md:py-14 bg-white  overflow-hidden " id="contactus">
 			<div className="container px-4 relative">
 				<div className="grid grid-cols-12 py-12">
 					<div className="col-span-12 lg:col-span-6 mb-4 lg:mb-0">

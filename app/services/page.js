@@ -57,7 +57,7 @@ ServiceItem.propTypes = {
 
 export default function Services() {
 	return (
-		<section className="ezy__service22 light py-14 md:py-24 bg-white relative z-[1]">
+		<section className="ezy__service22 light py-14 md:py-24 bg-white relative z-[1]" id="services">
 			<div className="absolute bottom-0 left-0 right-0 h-1/2 w-full bg-gradient-to-r from-teal-400 to-purple-600/40 bg-opacity-5 -z-[1]" />
 			<div className="container px-4 mx-auto">
 				<div className="flex flex-col md:flex-row gap-6 justify-between px-6">
