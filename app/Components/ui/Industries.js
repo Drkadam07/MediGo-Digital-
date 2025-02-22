@@ -120,8 +120,8 @@ for (let i = 0; i < images.length; i += 2) {
 const Industries = () => {
   return (
     <div className="w-full py-10 relative">
-      <div className="max-w-6xl mx-auto relative">
-        <Swiper
+      <div className="max-w-6xl  mx-auto relative">
+        <Swiper 
           modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={20}
           slidesPerView={1}
@@ -135,7 +135,7 @@ const Industries = () => {
           }}
         >
           {groupedImages.map((group, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide className="mt-4" key={index}>
               <div className="grid grid-rows-2 gap-4">
                 {group.map((item, i) => (
                   <a 
@@ -151,7 +151,6 @@ const Industries = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-        {/* Pagination outside Swiper */}
         <div className="custom-pagination mt-4 flex justify-center"></div>
       </div>
     </div>
