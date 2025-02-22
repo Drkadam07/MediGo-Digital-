@@ -78,9 +78,9 @@ export default function Contact() {
 								<h2 className="text-2xl leading-none font-bold md:text-[45px] mb-4">
 									Contact Us
 								</h2>
-								<p className="text-lg mb-0">
+								{/* <p className="text-lg mb-0">
 									We list your menu online, help you process orders.
-								</p>
+								</p> */}
 							</div>
 							<ContactForm />
 						</div>
