@@ -25,21 +25,21 @@ const ContactForm = () => {
 			<div className="mb-4">
 				<input
 					type="text"
-					className="min-h-[48px] leading-[48px] bg-[#3A384D]  border border-transparent rounded-xl focus:outline-none focus:border focus:border-[#86b7fe] w-full px-5"
+					className="min-h-[48px] leading-[48px] bg-[#3a384d1d]  border border-transparent rounded-xl focus:outline-none focus:border focus:border-[#86b7fe] w-full px-5"
 					placeholder="Enter Name"
 				/>
 			</div>
 			<div className="mb-4">
 				<input
 					type="email"
-					className="min-h-[48px] leading-[48px] bg-[#3A384D]  border border-transparent rounded-xl focus:outline-none focus:border focus:border-[#86b7fe] w-full px-5"
+					className="min-h-[48px] leading-[48px] bg-[#3a384d1d]  border border-transparent rounded-xl focus:outline-none focus:border focus:border-[#86b7fe] w-full px-5"
 					placeholder="Enter Email"
 				/>
 			</div>
 			<div className="mb-4">
 				<textarea
 					name="message"
-					className="min-h-[48px] leading-[48px] bg-[#3A384D]  border border-transparent rounded-xl focus:outline-none focus:border focus:border-[#86b7fe] w-full px-5"
+					className="min-h-[48px] leading-[48px] bg-[#3a384d1d]  border border-transparent rounded-xl focus:outline-none focus:border focus:border-[#86b7fe] w-full px-5"
 					placeholder="Enter Message"
 					rows="4"
 				></textarea>
@@ -71,7 +71,7 @@ export default function Contact() {
 						</div>
 					</div>
 					<div className="col-span-12 lg:col-span-6 xl:col-span-5 px-6 relative">
-						<div className="absolute top-0 left-0 lg:-left-[20%] right-0 bottom-0 bg-[#36344939] rounded-tl rounded-tr-[30px] rounded-br-[150px] rounded-bl-[50px]"></div>
+						<div className="absolute top-0 left-0 lg:-left-[20%] right-0 bottom-0 bg-[#34484939] rounded-tl rounded-tr-[30px] rounded-br-[150px] rounded-bl-[50px]"></div>
 
 						<div className="relative rounded my-12 py-6">
 							<div className="mb-12">
