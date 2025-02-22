@@ -29,17 +29,17 @@ export default function About() {
                         </div>
                     </div>
                     <div className="col-span-12 lg:col-span-6">
-                        <div className="w-[36vw] absolute top-0 right-0 bottom-0 float-left  bg-teal-300 bg-opacity-30" />
+                        <div className="w-[36vw] absolute top-0 right-0 bottom-0 float-left bg-teal-300 bg-opacity-30" />
                         <div className="relative flex justify-center lg:flex-col lg:pl-20">
                             <img
-                                src="https://cdn.easyfrontend.com/pictures/about/about13_1.jpg"
+                                src="/doc1.png"
                                 alt="About us image 1"
-                                className="rotate-45 w-60 h-60 lg:w-96 lg:h-96 object-cover mt-16"
+                                className=" w-80 h-80 md:w-72 md:h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-cover mt-16"
                             />
                             <img
-                                src="https://cdn.easyfrontend.com/pictures/about/about13_2.jpg"
+                                src="/doc2.jpeg"
                                 alt="About us image 2"
-                                className="hidden md:block rotate-45 w-60 h-60 lg:w-96 lg:h-96 object-cover mt-16 lg:-mt-16"
+                                className="hidden md:block rounded-2xl shadow-2xl shadow-slate-600 w-80 h-80 md:w-72 md:h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-cover mt-16 lg:-mt-16"
                             />
                         </div>
                     </div>
