@@ -39,6 +39,18 @@ const faqs = [
     question: "Why should I choose MediGo Digital for healthcare digital marketing?",
     answer: "Our deep industry knowledge, innovative strategies, and commitment to compliance make us a trusted partner for healthcare professionals.",
   },
+  {
+    question: "How do I get started with MediGo Digital healthcare digital marketing services?",
+    answer: "",
+  },
+  {
+    question: "Why is MediGo Digital one of the leading healthcare digital marketing agency?",
+    answer: "",
+  },
+  {
+    question: "Has MediGo Digital been awarded as the best healthcare digital marketing agency?" ,
+    answer : " ",
+  }
 ];
 
 const FAQSection = () => {
