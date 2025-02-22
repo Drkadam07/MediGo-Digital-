@@ -33,20 +33,13 @@ const blogs = [
 		year: "2021",
 	},
 ];
-
 const BlogItem = ({ blog }) => {
 	const { title, description, author, date, month, year, image } = blog;
 
 	return (
-		// <article className="rounded-lg shadow-lg bg-white shadow-gray-500 overflow-hidden pb-2">
-            <article className="min-h-[400px] lg:min-h-[450px] rounded-lg shadow-lg bg-white shadow-gray-500 overflow-hidden pb-2 flex flex-col">
-
+		<article className="min-h-[450px] rounded-lg shadow-lg bg-white shadow-gray-500 overflow-hidden pb-2 flex flex-col">
 			<div className="relative">
-				<img
-					src={image}
-					alt={title}
-					className="h-auto w-full shadow-lg dark:shadow-none"
-				/>
+				<img src={image} alt={title} className="h-auto w-full shadow-lg dark:shadow-none" />
 				<div className="absolute bottom-2 left-2 text-lg leading-6 px-6 py-3 font-black bg-white opacity-80 rounded-lg">
 					{date}
 					<br />
@@ -55,7 +48,7 @@ const BlogItem = ({ blog }) => {
 					{year}
 				</div>
 			</div>
-			<div className="p-4 pb-8 md:p-6">
+			<div className="p-4 pb-8 md:p-6 flex-grow flex flex-col">
 				<p className="font-light text-sm leading-6">
 					By{" "}
 					<a href="#!" className="text-blue-600">
@@ -63,13 +56,22 @@ const BlogItem = ({ blog }) => {
 					</a>
 				</p>
 				<h4 className="font-medium text-2xl">{title}</h4>
-				<p className="opacity-60 mt-3 mb-6">{description}</p>
-				<a
-					href="#!"
-					className="bg-transparent hover:bg-blue-600 border border-blue-600 hover:text-white py-2 px-5 rounded transition mb-5"
-				>
-					Read More
-				</a>
+				{/* Description Box with Fixed Height */}
+				<div className="relative h-[60px] md:h-[72px] lg:h-[90px] overflow-hidden">
+					<p className="opacity-60 text-ellipsis overflow-hidden">
+						{description}
+					</p>
+					{/* Gradient Fade for Long Text */}
+					<div className="absolute bottom-0 left-0 w-full h-6 bg-gradient-to-t from-white to-transparent"></div>
+				</div>
+				<div className="mt-auto pt-2">
+					<a
+						href="#!"
+						className=" py-2 px-5 bg-gradient-to-r text-gray-800 font-semibold rounded-full shadow-xl shadow-purple-400/40 from-white via-[#add8e6] to-[#f8d7da] hover:bg-gradient-to-r hover:from-[#add8e6] hover:to-white  transition"
+					>
+						Read More
+					</a>
+				</div>
 			</div>
 		</article>
 	);
@@ -92,19 +94,15 @@ export default function Blog (){
 				<div className="container px-8 md:px-24">
 					<div className="grid grid-cols-12 justify-center">
 						<div className="col-span-12 lg:col-span-8">
-							<h2 className="text-[32px] lg:text-[45px] leading-none font-bold mb-4">
-								Heal the world with banking blog.
-							</h2>
+                        <h4 className="uppercase text-2xl font-semibold md:text-3xl lg:text-5xl leading-tight mb-2 
+                                    bg-gradient-to-r from-teal-400 to-purple-600 text-transparent bg-clip-text 
+                                    hover:text-gray-800 hover:drop-shadow-[0_0_10px_rgba(0,255,255,0.7)] transition duration-300 ease-in-out">
+                            MediGo Digital
+                        </h4>
 							<p className="text-lg font-medium opacity-80 mb-9">
-								Banking crises have developed many times throughout history when
-								one or more risks have emerged for a banking sector as a whole.
+								Stay updated with the latest trends in healthcare and technology. 
+								Discover insightful articles, expert opinions, and industry updates.
 							</p>
-							<a
-								href="#!"
-								className="bg-blue-600 hover:bg-opacity-90 text-white font-bold border border-blue-600 py-3 px-7 rounded transition"
-							>
-								Load All Posts
-							</a>
 						</div>
 					</div>
 
