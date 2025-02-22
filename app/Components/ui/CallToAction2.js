@@ -9,7 +9,7 @@ const CallToAction2 = () => {
         <div className="bg-gradient-to-r from-purple-50 to-teal-50 rounded-lg p-6 md:p-10 flex flex-col md:flex-row items-center gap-6 shadow-lg">
             <div className="w-full md:w-1/2 flex justify-center">
                 <img
-                    src="#"
+                    src="/AssetsServices/call.png"
                     alt="Doctors running"
                     className="w-full max-w-sm md:max-w-md"
                 />
