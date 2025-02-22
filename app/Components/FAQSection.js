@@ -62,7 +62,7 @@ const FAQSection = () => {
 
   return (
     <section className="bg-gradient-to-r from-purple-50 to-teal-50 min-h-screen p-6">
-    <div className="max-w-4xl mx-auto p-6">
+    <div className="max-w-5xl mx-auto p-6">
       <h2 className="uppercase text-center text-xl font-semibold md:text-2xl lg:text-3xl leading-tight mb-6">
         FAQ’s About Digital Marketing for Healthcare
       </h2>
