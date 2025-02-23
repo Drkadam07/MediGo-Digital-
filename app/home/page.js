@@ -29,7 +29,9 @@ export default function Hero() {
                 alt="Award Certificate"
                 width={600}
                 height={400}
-                className="rounded-lg"
+                className="rounded-lg pointer-events-none select-none"
+                draggable="false"
+                // onContextMenu={(e) => e.preventDefault()}
               />
               <div className="absolute -right-8 -bottom-8">
                 <img
@@ -37,7 +39,8 @@ export default function Hero() {
                   alt="Award Trophy"
                   width={200}
                   height={200}
-                  className="animate-bounce"
+                  draggable="false"
+                  className="animate-bounce pointer-events-none select-none"
                 />
               </div>
             </div>

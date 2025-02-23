@@ -5,7 +5,7 @@ const CallToAction = () => {
     <div className=" bg-gradient-to-r from-teal-50 to-purple-50 bg-opacity-5 py-10 px-5 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto rounded-xl">
       {/* Left Side - Image */}
       <div className="w-full md:w-1/2 flex justify-center">
-        <img src="/AssetsServices/call2.png" alt="Healthcare CTA" className="max-w-full" />
+        <img src="/AssetsServices/call2.png" alt="Healthcare CTA" className="max-w-full pointer-events-none select-none" draggable="false" />
       </div>
       
       {/* Right Side - Text and Form */}

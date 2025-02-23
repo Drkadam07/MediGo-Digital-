@@ -143,7 +143,7 @@ const Industries = () => {
                     href={item.link} 
                     className="bg-white rounded-lg shadow-lg overflow-hidden block"
                   >
-                    <img src={item.src} alt={item.title} className="w-full h-48 object-cover" />
+                    <img src={item.src} alt={item.title}  className="w-full h-48 object-cover pointer-events-none select-none" draggable="false" />
                     <div className="p-4 text-center text-gray-900 font-semibold">{item.title}</div>
                   </a>
                 ))}

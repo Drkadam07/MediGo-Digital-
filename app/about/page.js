@@ -34,12 +34,14 @@ export default function About() {
                             <img
                                 src="/doc1.png"
                                 alt="About us image 1"
-                                className=" w-80 h-80 md:w-72 md:h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-cover mt-16"
+                                draggable="false"
+                                className=" w-80 h-80 md:w-72 md:h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-cover mt-16 pointer-events-none select-none"
                             />
                             <img
                                 src="/doc2.jpeg"
                                 alt="About us image 2"
-                                className="hidden md:block rounded-2xl shadow-2xl shadow-slate-600 w-80 h-80 md:w-72 md:h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-cover mt-16 lg:-mt-16"
+                                draggable="false"
+                                className="hidden md:block rounded-2xl shadow-2xl shadow-slate-600 w-80 h-80 md:w-72 md:h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-cover mt-16 lg:-mt-16 pointer-events-none select-none"
                             />
                         </div>
                     </div>

@@ -82,7 +82,8 @@ export default function Services() {
 						<img
 							src="/AssetsServices/card6.png"
 							alt="Healthcare Digital Marketing"
-							className="w-full rounded-xl object-cover"
+							className="w-full rounded-xl object-cover pointer-events-none select-none"
+							draggable="false"
 						/>
 					</div>
 				</div>

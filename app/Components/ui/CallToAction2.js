@@ -11,7 +11,8 @@ const CallToAction2 = () => {
                 <img
                     src="/AssetsServices/call.png"
                     alt="Doctors running"
-                    className="w-full max-w-sm md:max-w-md"
+                    draggable="false"
+                    className="w-full max-w-sm md:max-w-md pointer-events-none select-none"
                 />
             </div>
 
