@@ -7,54 +7,65 @@ const serviceList = [
 		title: "Search Engine Optimization {SEO}",
 		description:
 			"Enhance your online visibility and attract more patients with our expert SEO strategies, optimizing your website for higher search engine rankings. 🚀",
-	},
+		img:'/AssetsServices/card1.jpg'
+		},
 	{
 		icon: "/AssetsServices/Smedigo4.png",
 		title: "Social Media Marketing {SMM}",
 		description:
 			"Engage, educate, and grow your healthcare brand with targeted social media strategies that connect you with the right audience. 📢",
-	},
+		img:'/AssetsServices/card2.jpg'
+		},
 	{
 		icon: "/AssetsServices/Smedigo3_3.png",
 		title: "Pay Per Click {PPC}",
 		description:
 			"Optimize your budget by targeting the right patients and generating high-quality leads with data-driven PPC campaigns. 🚀",
-	},
+		img:'/AssetsServices/card3.png'
+		},
 	{
 		icon: "/AssetsServices/Smedigo2.png",
 		title: "Google My Business {GMB}",
 		description:
 			"Boost your local presence, attract more patients, and enhance your credibility with optimized GMB listings.📍",
-	},
+		img:'/AssetsServices/card4.png'
+		},
 	{
 		icon: "/AssetsServices/Smedigo1.png",
 		title: "Website Design & Development",
 		description:
 			"Create customized, conversion-friendly websites that improve rankings and drive fast conversions.",
-	},
+		img:'/AssetsServices/card5.jpg'
+		},
 ];
-
 const ServiceItem = ({ service }) => (
-	<div className="bg-white shadow-xl rounded-xl h-full flex flex-col">
-		<div className="p-3 md:p-6 flex-grow">
-			<div className="w-[75px] h-[75px] rounded-full text-[26px] shadow-xl flex justify-center items-center mb-6">
-				<img src={service.icon} alt="Service Icon" />
-			</div>
-			<h4 className="text-2xl mb-6 font-bold">{service.title}</h4>
-			<p className="opacity-70 leading-[1.8]">{service.description}</p>
+	<div className="bg-white shadow-md rounded-xl h-full flex flex-col group relative overflow-hidden shadow-gray-800">
+	  {/* Background Image with Blue Transparent Overlay on Hover */}
+	  <div 
+		className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 group-hover:blur-sm transition-all duration-500" 
+		style={{ backgroundImage: `url(${service.img})` }}
+	  >
+		<div className="absolute inset-0 bg-gray-50 opacity-0 group-hover:opacity-50 transition-all duration-500"></div>
+	  </div>
+  
+	  <div className="p-3 md:p-6 flex-grow relative z-10">
+		<div className="w-[75px] h-[75px] rounded-full text-[26px] shadow-xl flex justify-center items-center mb-6">
+		  <img src={service.icon} alt="Service Icon" />
 		</div>
-		<div className="p-2 md:p-4 pt-0 text-right">
-			<button className="bg-gradient-to-r text-gray-800 font-semibold rounded-full shadow-xl shadow-purple-400/40 from-white via-[#add8e6] to-[#f8d7da] hover:bg-gradient-to-r hover:from-[#add8e6] hover:to-white py-2 px-6 transition-all">
-				Know More
-			</button>
-		</div>
+		<h4 className="text-2xl mb-6 font-bold">{service.title}</h4>
+		<p className="opacity-70 leading-[1.8]">{service.description}</p>
+	  </div>
+  
+	  <div className="p-2 md:p-4 pt-0 text-right relative z-10">
+		<button className="bg-gradient-to-r text-gray-800 font-semibold rounded-full shadow-xl shadow-purple-400/40 from-white via-[#add8e6] to-[#f8d7da] hover:bg-gradient-to-r hover:from-[#add8e6] hover:to-white py-2 px-6 transition-all">
+		  Know More
+		</button>
+	  </div>
 	</div>
-);
+  );
+  
 
-ServiceItem.propTypes = {
-	service: PropTypes.object.isRequired,
-};
-
+	
 export default function Services() {
 	return (
 		<section className="ezy__service22 light py-14 md:py-24 bg-white relative z-[1]" id="services">
