@@ -69,7 +69,7 @@ export default function Contact() {
       <div className="col-span-12 lg:col-span-6 mb-4 lg:mb-0">
         <div className="h-full flex items-center">
           <img
-            src="/contactus.jpg"
+            src="/contact.jpg"
             alt="Contact us"
 			draggable="false"
             className="max-w-full h-auto relative z-[2] rounded-tr-[100px] rounded-br rounded-bl-[100px] mx-auto pointer-events-none select-none"
