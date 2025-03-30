@@ -94,22 +94,22 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const images = [
-  { src: "/AboutDoctor2.webp", title: "Gastroenterologists", link: "/gastroenterologists" },
-  { src: "/AboutDoctor2.webp", title: "Doctors", link: "/doctors" },
-  { src: "/AboutDoctor2.webp", title: "Clinics", link: "/clinics" },
-  { src: "/AboutDoctor2.webp", title: "Hospitals", link: "/hospitals" },
-  { src: "/AboutDoctor2.webp", title: "Plastic Surgeons", link: "/plastic-surgeons" },
-  { src: "/AboutDoctor2.webp", title: "Surgeons", link: "/surgeons" },
-  { src: "/AboutDoctor2.webp", title: "Bariatricians", link: "/bariatricians" },
-  { src: "/AboutDoctor2.webp", title: "Cardiologists", link: "/cardiologists" },
-  { src: "/AboutDoctor2.webp", title: "Gastroenterologists", link: "/gastroenterologists" },
-  { src: "/AboutDoctor2.webp", title: "Doctors", link: "/doctors" },
-  { src: "/AboutDoctor2.webp", title: "Clinics", link: "/clinics" },
-  { src: "/AboutDoctor2.webp", title: "Hospitals", link: "/hospitals" },
-  { src: "/AboutDoctor2.webp", title: "Plastic Surgeons", link: "/plastic-surgeons" },
-  { src: "/AboutDoctor2.webp", title: "Surgeons", link: "/surgeons" },
-  { src: "/AboutDoctor2.webp", title: "Bariatricians", link: "/bariatricians" },
-  { src: "/AboutDoctor2.webp", title: "Cardiologists", link: "/cardiologists" },
+  { src: "/img/Gastroenterologists.png", title: "Gastroenterologists", link: "/gastroenterologists" },
+  { src: "/contactus.jpg", title: "Doctors", link: "/doctors" },
+  { src: "/img/Clinics.png", title: "Clinics", link: "/clinics" },
+  { src: "/img/Hospitals.png", title: "Hospitals", link: "/hospitals" },
+  { src: "/img/Plastic_Surgeons.png", title: "Plastic Surgeons", link: "/plastic-surgeons" },
+  { src: "/img/Surgeons.png", title: "Surgeons", link: "/surgeons" },
+  { src: "/img/Bariatricians.png", title: "Bariatricians", link: "/bariatricians" },
+  { src: "/img/Cardiologists.png", title: "Cardiologists", link: "/cardiologists" },
+  { src: "/img/Physiotherapists.png", title: "Physiotherapists", link: "/physiotherapists" },
+  { src: "/img/ENT_Doctors.png", title: "ENT Doctors", link: "/entdoctors" },
+  { src: "/img/Gynecologists.png", title: "Gynecologists", link: "/gynecologists" },
+  { src: "/img/Neurologists.png", title: "Neurologists", link: "/neurologists" },
+  { src: "/img/Dentists.png", title: "Dentists", link: "/dentists" },
+  { src: "/img/Orthopedic.png", title: "Orthopedic", link: "/orthopedic" },
+  // { src: "/AboutDoctor2.webp", title: "Bariatricians", link: "/bariatricians" },
+  // { src: "/AboutDoctor2.webp", title: "Cardiologists", link: "/cardiologists" },
 ];
 
 const groupedImages = [];
